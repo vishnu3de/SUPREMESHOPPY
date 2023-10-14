@@ -582,6 +582,7 @@ def item_decrement(request):
 def cart_detail(request):
     username = User.objects.get(id=request.user.id)
     ress = ShiAddress.objects.filter(username=username)
+    print(ress)
     men = 1
     women = 2
     mcategor = ProductsName.objects.filter(id=men)
